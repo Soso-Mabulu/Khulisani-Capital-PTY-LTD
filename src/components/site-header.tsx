@@ -8,8 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navItems = [
-  { name: 'About', href: '/#about' },
-  { name: 'Services', href: '/#services' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
   { name: 'Teams', href: '/#teams' },
   { name: 'Values', href: '/#values' },
   { name: 'FAQ', href: '/#faq' },
