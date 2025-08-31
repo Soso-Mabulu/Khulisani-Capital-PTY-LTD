@@ -47,7 +47,7 @@ export default function AboutPage() {
                     </div>
                     <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden group">
                         <Image
-                          data-ai-hint="business team meeting"
+                          data-ai-hint="business strategy growth"
                           src="https://picsum.photos/800/600"
                           alt="About Kulisani Capital Team"
                           fill
