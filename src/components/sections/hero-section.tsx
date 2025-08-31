@@ -1,36 +1,51 @@
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from "next/image";
+import { MoveRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-center text-white">
-      <Image
-        src="https://picsum.photos/1920/1080"
-        alt="Abstract background representing financial services"
-        data-ai-hint="professional office abstract"
-        fill
-        className="object-cover -z-10"
-        priority
-      />
-      <div className="absolute inset-0 bg-brand/80 -z-10" />
+    <section className="relative min-h-[80vh] flex items-center">
+       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background/50 -z-10"/>
+       <Image
+         src="https://picsum.photos/1920/1280"
+         alt="Abstract background representing financial services"
+         data-ai-hint="professional office abstract"
+         fill
+         className="object-cover -z-20 opacity-20"
+         priority
+       />
 
       <div className="container px-4 md:px-6">
-        <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Empowering Businesses with Strategic Financial Clarity
-          </h1>
-          <p className="text-lg md:text-xl text-blue-100">
-            Precision-driven advisory solutions in tax, audit, accounting, valuations, and more.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="#services">Our Services</Link>
-            </Button>
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="#contact">Request a Consultation</Link>
-            </Button>
-          </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-center md:text-left">
+                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
+                    Strategic Financial Clarity
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
+                    Precision-driven advisory in tax, audit, accounting, and valuations to empower your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <Button size="lg" asChild>
+                    <Link href="#services">
+                        Our Services
+                        <MoveRight className="ml-2" />
+                    </Link>
+                    </Button>
+                    <Button size="lg" variant="secondary" asChild>
+                    <Link href="#contact">Request Consultation</Link>
+                    </Button>
+                </div>
+            </div>
+            <div className="relative h-80 md:h-[500px] hidden md:block">
+                 <Image
+                    src="https://picsum.photos/800/600"
+                    alt="Financial professionals in a meeting"
+                    data-ai-hint="finance meeting"
+                    fill
+                    className="object-cover rounded-2xl shadow-2xl"
+                />
+            </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Users, Scaling, Receipt, Cpu } from "lucide-react";
 
 const teams = [
@@ -26,10 +26,10 @@ const teams = [
 
 export default function TeamsSection() {
     return (
-        <section id="teams" className="py-16 lg:py-24">
+        <section id="teams" className="py-16 lg:py-24 bg-background">
             <div className="container">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                         Our Specialist Teams
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -39,12 +39,12 @@ export default function TeamsSection() {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                     {teams.map((team, index) => (
-                        <Card key={index} className="flex items-start space-x-6 p-6">
+                        <Card key={index} className="flex items-start space-x-6 p-6 bg-card/50 hover:bg-card/90 transition-colors">
                             <div className="flex-shrink-0 mt-1">
                                 {team.icon}
                             </div>
                             <div className="flex-grow">
-                                <h3 className="font-headline text-lg font-semibold text-brand">{team.title}</h3>
+                                <h3 className="font-headline text-lg font-semibold text-foreground">{team.title}</h3>
                                 <p className="mt-2 text-muted-foreground">{team.description}</p>
                             </div>
                         </Card>

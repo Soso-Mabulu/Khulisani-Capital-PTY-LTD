@@ -28,7 +28,7 @@ export default function CareersPage() {
         <div className="bg-background">
             <div className="container py-16 lg:py-24">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight text-brand sm:text-5xl">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
                         Join Our Team
                     </h1>
                     <p className="mt-6 text-lg text-muted-foreground">
@@ -38,12 +38,12 @@ export default function CareersPage() {
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {opportunities.map((opp, index) => (
-                        <Card key={index} className="flex flex-col">
+                        <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-colors">
                             <CardHeader>
                                  <div className="mb-4">
                                     {opp.icon}
                                 </div>
-                                <CardTitle className="font-headline text-xl text-brand">{opp.title}</CardTitle>
+                                <CardTitle className="font-headline text-xl text-foreground">{opp.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow">
                                 <p className="text-muted-foreground">
@@ -61,7 +61,7 @@ export default function CareersPage() {
                 </div>
 
                  <div className="mt-20 text-center bg-card p-8 rounded-lg">
-                    <h2 className="font-headline text-2xl font-bold text-brand">No open roles that fit your profile?</h2>
+                    <h2 className="font-headline text-2xl font-bold text-foreground">No open roles that fit your profile?</h2>
                     <p className="mt-4 text-muted-foreground">We are always interested in hearing from exceptional talent. Send us your resume and tell us why you'd be a great fit for Kulisani Capital.</p>
                     <Button className="mt-6">
                         <a href="mailto:careers@kulisani.co.za">Submit Your CV</a>

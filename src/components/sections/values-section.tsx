@@ -1,4 +1,3 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Award, Zap, Handshake, Lightbulb, TrendingUp } from "lucide-react";
 
 const values = [
@@ -31,10 +30,10 @@ const values = [
 
 export default function ValuesSection() {
     return (
-        <section id="values" className="py-16 lg:py-24">
+        <section id="values" className="py-16 lg:py-24 bg-card">
             <div className="container">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                         Our Values
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -44,11 +43,11 @@ export default function ValuesSection() {
 
                 <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                     {values.map((value, index) => (
-                        <div key={index} className="relative p-6 rounded-lg bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div key={index} className="relative p-6 rounded-lg bg-background transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                             <div className="mb-4">
                                 {value.icon}
                             </div>
-                            <h3 className="font-headline text-lg font-bold text-brand">{value.title}</h3>
+                            <h3 className="font-headline text-lg font-bold text-foreground">{value.title}</h3>
                             <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                     ))}

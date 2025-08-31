@@ -20,30 +20,29 @@ export function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Logo />
+        <div className="flex items-center md:flex-1">
+           <Logo />
         </div>
         
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="md:hidden">
-            <Logo />
-          </div>
-          <nav className="hidden md:flex md:gap-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+        <nav className="hidden md:flex flex-1 justify-center">
+            <ul className='flex items-center gap-6'>
+                {navItems.map((item) => (
+                <li key={item.name}>
+                    <Link
+                        href={item.href}
+                        className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                        {item.name}
+                    </Link>
+                </li>
+                ))}
+            </ul>
+        </nav>
           
-          <div className="flex items-center gap-2">
-             <Button asChild className='hidden md:inline-flex'>
+        <div className="flex flex-1 items-center justify-end gap-2">
+             <Button asChild>
                 <Link href="/#contact">Contact Us</Link>
             </Button>
 
@@ -81,7 +80,6 @@ export function SiteHeader() {
                 </div>
               </SheetContent>
             </Sheet>
-          </div>
         </div>
       </div>
     </header>
