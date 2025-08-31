@@ -121,11 +121,27 @@ export default {
         '800': '800ms',
         '1000': '1000ms',
         '1200': '1200ms',
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: '700',
+            },
+            h2: {
+              fontWeight: '600',
+            },
+            h3: {
+              fontWeight: '600',
+            },
+          }
+        }
       }
     },
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
     function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
       const newUtilities = {
         '.animation-delay-200': {

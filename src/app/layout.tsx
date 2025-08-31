@@ -4,6 +4,7 @@ import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from "@/components/ui/toaster";
+import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: 'Kulisani Capital | Precision-Driven Financial & Strategic Advisory',
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div className="relative flex min-h-dvh flex-col bg-background">
           <SiteHeader />
           <main className="flex-1">{children}</main>
+          <Chatbot />
           <SiteFooter />
         </div>
         <Toaster />
