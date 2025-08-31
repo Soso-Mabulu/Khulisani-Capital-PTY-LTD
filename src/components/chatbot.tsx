@@ -6,8 +6,8 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { Bot, Send, User, X } from 'lucide-react';
-import React, { useRef, useState, useTransition } from 'react';
+import { Bot, Send, User } from 'lucide-react';
+import React, { useEffect, useRef, useState, useTransition } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { useToast } from '@/hooks/use-toast';
@@ -25,42 +25,49 @@ export function Chatbot() {
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
+  const scrollToBottom = () => {
+    if (scrollAreaRef.current) {
+        const viewport = scrollAreaRef.current.querySelector('div[data-radix-scroll-area-viewport]');
+        if (viewport) {
+            setTimeout(() => {
+                viewport.scrollTop = viewport.scrollHeight;
+            }, 0);
+        }
+    }
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
 
     const userMessage: Message = { role: 'user', content: input };
     setMessages((prev) => [...prev, userMessage]);
+    const messageToSend = input;
     setInput('');
 
     startTransition(async () => {
       try {
         const response = await siteChat({
           history: messages,
-          message: input,
+          message: messageToSend,
         });
 
         const modelMessage: Message = { role: 'model', content: response };
         setMessages((prev) => [...prev, modelMessage]);
-        
-        // Scroll to bottom
-        setTimeout(() => {
-            if(scrollAreaRef.current) {
-                const viewport = scrollAreaRef.current.querySelector('div[data-radix-scroll-area-viewport]');
-                if (viewport) {
-                    viewport.scrollTop = viewport.scrollHeight;
-                }
-            }
-        }, 0);
 
       } catch (error) {
+        console.error("Chatbot error:", error);
         toast({
           title: 'Error',
           description: 'Failed to get a response from the chatbot. Please try again.',
           variant: 'destructive',
         });
-        // remove the user message if the call fails
-        setMessages(prev => prev.slice(0, prev.length - 1));
+        // You might want to remove the user's message if the API call fails
+        // setMessages((prev) => prev.slice(0, prev.length - 1));
       }
     });
   };
@@ -72,20 +79,24 @@ export function Chatbot() {
           <Button
             variant="default"
             size="icon"
-            className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg"
+            className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-lg"
           >
-            <Bot className="h-7 w-7" />
+            <Bot className="h-8 w-8" />
             <span className="sr-only">Open Chatbot</span>
           </Button>
         </SheetTrigger>
-        <SheetContent className="flex flex-col p-0 w-full sm:w-[500px] sm:max-w-full">
+        <SheetContent className="flex flex-col p-0 w-full max-w-full sm:max-w-lg">
           <SheetHeader className="p-4 border-b">
             <SheetTitle className="flex items-center gap-2">
-              <Bot /> Kulisani AI Assistant
+              <Avatar className="h-8 w-8">
+                <AvatarImage src="/logo.jpg" alt="Kulisani AI" />
+                <AvatarFallback>AI</AvatarFallback>
+              </Avatar>
+              Kulisani AI Assistant
             </SheetTitle>
           </SheetHeader>
           <ScrollArea className="flex-1" ref={scrollAreaRef}>
-            <div className="p-4 space-y-4">
+            <div className="p-4 space-y-6">
               {messages.map((message, index) => (
                 <div
                   key={index}
@@ -95,26 +106,25 @@ export function Chatbot() {
                   )}
                 >
                   {message.role === 'model' && (
-                    <Avatar className="h-8 w-8">
+                    <Avatar className="h-9 w-9">
                        <AvatarImage src="/logo.jpg" alt="Kulisani AI" />
                        <AvatarFallback>AI</AvatarFallback>
                     </Avatar>
                   )}
                   <div
                     className={cn(
-                      'p-3 rounded-lg max-w-[80%]',
+                      'p-3 rounded-lg max-w-[85%]',
                       message.role === 'user'
                         ? 'bg-primary text-primary-foreground'
                         : 'bg-muted'
                     )}
                   >
-                    <ReactMarkdown className="prose prose-sm dark:prose-invert">
+                    <ReactMarkdown className="prose prose-sm dark:prose-invert max-w-full">
                       {message.content}
                     </ReactMarkdown>
                   </div>
                    {message.role === 'user' && (
-                    <Avatar className="h-8 w-8">
-                       <AvatarImage />
+                    <Avatar className="h-9 w-9">
                        <AvatarFallback><User className="h-5 w-5"/></AvatarFallback>
                     </Avatar>
                   )}
@@ -122,12 +132,12 @@ export function Chatbot() {
               ))}
               {isPending && (
                 <div className="flex items-start gap-3">
-                  <Avatar className="h-8 w-8">
+                  <Avatar className="h-9 w-9">
                      <AvatarImage src="/logo.jpg" alt="Kulisani AI" />
                      <AvatarFallback>AI</AvatarFallback>
                   </Avatar>
                   <div className="p-3 rounded-lg bg-muted">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2 h-5">
                         <span className="h-2 w-2 bg-foreground rounded-full animate-pulse delay-0"></span>
                         <span className="h-2 w-2 bg-foreground rounded-full animate-pulse delay-200"></span>
                         <span className="h-2 w-2 bg-foreground rounded-full animate-pulse delay-400"></span>
@@ -137,13 +147,14 @@ export function Chatbot() {
               )}
             </div>
           </ScrollArea>
-          <div className="p-4 border-t">
+          <div className="p-4 border-t bg-background">
             <form onSubmit={handleSendMessage} className="flex items-center gap-2">
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask me anything about Kulisani..."
+                placeholder="Ask anything about Kulisani..."
                 disabled={isPending}
+                className="flex-1"
               />
               <Button type="submit" size="icon" disabled={isPending || !input.trim()}>
                 <Send className="h-5 w-5" />

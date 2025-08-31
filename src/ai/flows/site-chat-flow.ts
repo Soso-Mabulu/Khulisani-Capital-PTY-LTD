@@ -22,11 +22,17 @@ export type SiteChatInput = z.infer<typeof SiteChatInputSchema>;
 export type SiteChatOutput = string;
 
 
-const prompt = ai.definePrompt({
-  name: 'siteChatPrompt',
-  input: {schema: SiteChatInputSchema},
-  output: {format: 'text'},
-  prompt: `You are a helpful and friendly chatbot for Kulisani Capital, a professional services firm. Your goal is to answer user questions based on the information provided below. Do not make up information. If the answer is not in the context, say that you don't have that information.
+const siteChatFlow = ai.defineFlow(
+  {
+    name: 'siteChatFlow',
+    inputSchema: SiteChatInputSchema,
+    outputSchema: z.string(),
+  },
+  async ({history, message}) => {
+    const llm = ai.model('gemini-2.5-flash');
+
+    const response = await llm.generate({
+      prompt: `You are a helpful and friendly chatbot for Kulisani Capital, a professional services firm. Your goal is to answer user questions based on the information provided below. Do not make up information. If the answer is not in the context, say that you don't have that information.
 
 Keep your answers concise and helpful.
 
@@ -60,30 +66,14 @@ We offer open roles for talented professionals, internship and graduate opportun
 - Office: Pretoria, South Africa
 
 Now, continue the conversation based on the history and the user's new message.
-
-{{#each history}}
-  {{#if (eq role 'user')}}
-    User: {{{content}}}
-  {{/if}}
-  {{#if (eq role 'model')}}
-    You: {{{content}}}
-  {{/if}}
-{{/each}}
-
-User: {{{message}}}
-You:
 `,
-});
+      history,
+      promptHistory: [
+        {role: 'user', content: message}
+      ]
+    });
 
-const siteChatFlow = ai.defineFlow(
-  {
-    name: 'siteChatFlow',
-    inputSchema: SiteChatInputSchema,
-    outputSchema: z.string(),
-  },
-  async (input) => {
-    const {output} = await prompt(input);
-    return output!;
+    return response.text;
   }
 );
 
