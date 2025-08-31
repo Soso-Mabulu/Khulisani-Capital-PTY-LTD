@@ -38,7 +38,7 @@ export default function CareersPage() {
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {opportunities.map((opp, index) => (
-                        <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-colors">
+                        <Card key={index} className="flex flex-col bg-card hover:shadow-lg transition-shadow">
                             <CardHeader>
                                  <div className="mb-4">
                                     {opp.icon}
@@ -49,6 +49,7 @@ export default function CareersPage() {
                                 <p className="text-muted-foreground">
                                     {opp.description}
                                 </p>
+
                             </CardContent>
                              <CardFooter>
                                 <Button variant="outline" className="w-full">
@@ -60,7 +61,7 @@ export default function CareersPage() {
                     ))}
                 </div>
 
-                 <div className="mt-20 text-center bg-card p-8 rounded-lg">
+                 <div className="mt-20 text-center bg-card p-8 rounded-lg border">
                     <h2 className="font-headline text-2xl font-bold text-foreground">No open roles that fit your profile?</h2>
                     <p className="mt-4 text-muted-foreground">We are always interested in hearing from exceptional talent. Send us your resume and tell us why you'd be a great fit for Kulisani Capital.</p>
                     <Button className="mt-6">

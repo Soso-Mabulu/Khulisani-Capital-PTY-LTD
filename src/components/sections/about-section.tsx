@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-16 lg:py-24 bg-background">
+        <section id="about" className="py-16 lg:py-24 bg-card">
             <div className="container">
                 <div className="max-w-3xl mx-auto text-center">
                      <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -23,13 +23,13 @@ export default function AboutSection() {
                     </div>
                      <div className="relative h-96 rounded-lg overflow-hidden group">
                         <Image
-                          data-ai-hint="team collaboration"
+                          data-ai-hint="team collaboration office"
                           src="https://picsum.photos/600/400"
                           alt="Our Team"
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 </div>
                 <div className="mt-16 max-w-3xl mx-auto text-center">

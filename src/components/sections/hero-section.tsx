@@ -5,14 +5,14 @@ import { MoveRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center">
+    <section className="relative min-h-[80vh] flex items-center bg-background">
        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background/50 -z-10"/>
        <Image
          src="https://picsum.photos/1920/1280"
          alt="Abstract background representing financial services"
          data-ai-hint="professional office abstract"
          fill
-         className="object-cover -z-20 opacity-20"
+         className="object-cover -z-20 opacity-5"
          priority
        />
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
                     </Link>
                     </Button>
                     <Button size="lg" variant="secondary" asChild>
-                    <Link href="#contact">Request Consultation</Link>
+                    <Link href="/contact">Request Consultation</Link>
                     </Button>
                 </div>
             </div>
@@ -41,9 +41,9 @@ export default function HeroSection() {
                  <Image
                     src="https://picsum.photos/800/600"
                     alt="Financial professionals in a meeting"
-                    data-ai-hint="finance meeting"
+                    data-ai-hint="finance meeting business"
                     fill
-                    className="object-cover rounded-2xl shadow-2xl"
+                    className="object-cover rounded-2xl shadow-lg"
                 />
             </div>
         </div>

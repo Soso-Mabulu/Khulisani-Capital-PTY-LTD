@@ -26,7 +26,7 @@ const drives = [
 
 export default function MissionSection() {
     return (
-        <section id="mission" className="py-16 lg:py-24 bg-card">
+        <section id="mission" className="py-16 lg:py-24 bg-background">
             <div className="container">
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -39,7 +39,7 @@ export default function MissionSection() {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {drives.map((drive, index) => (
-                        <Card key={index} className="text-center hover:shadow-xl transition-shadow bg-background/50 border-border/50">
+                        <Card key={index} className="text-center hover:shadow-xl transition-shadow bg-card border-border/50">
                             <CardHeader>
                                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
                                     {drive.icon}

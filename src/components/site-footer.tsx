@@ -11,7 +11,7 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-card text-card-foreground border-t">
+    <footer id="contact-section" className="bg-card text-card-foreground border-t">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col space-y-4 md:col-span-1">

@@ -43,7 +43,7 @@ export function SiteHeader() {
           
         <div className="flex flex-1 items-center justify-end gap-2">
              <Button asChild>
-                <Link href="/#contact">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
             </Button>
 
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -75,7 +75,7 @@ export function SiteHeader() {
                     ))}
                   </nav>
                    <Button asChild className='w-full mt-8'>
-                        <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+                        <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
                     </Button>
                 </div>
               </SheetContent>
