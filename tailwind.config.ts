@@ -78,12 +78,76 @@ export default {
             height: '0',
           },
         },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+        'pulse-slow': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            opacity: '0.5'
+          },
+          '50%': {
+            transform: 'scale(1.05)',
+            opacity: '0.8'
+          },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+        'fade-in': 'fade-in 0.6s ease-out forwards',
+        'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      animationDelay: {
+        '200': '200ms',
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+        '1000': '1000ms',
+        '1200': '1200ms',
+      }
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
+      const newUtilities = {
+        '.animation-delay-200': {
+          'animation-delay': theme('animationDelay.200'),
+        },
+        '.animation-delay-400': {
+          'animation-delay': theme('animationDelay.400'),
+        },
+        '.animation-delay-600': {
+          'animation-delay': theme('animationDelay.600'),
+        },
+        '.animation-delay-800': {
+          'animation-delay': theme('animationDelay.800'),
+        },
+        '.animation-delay-1000': {
+          'animation-delay': theme('animationDelay.1000'),
+        },
+        '.animation-delay-1200': {
+            'animation-delay': theme('animationDelay.1200'),
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;

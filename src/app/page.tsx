@@ -8,14 +8,26 @@ import FaqSection from '@/components/sections/faq-section';
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-16 md:gap-24">
       <HeroSection />
-      <AboutSection />
-      <MissionSection />
-      <ValuesSection />
-      <ServicesSection />
-      <TeamsSection />
-      <FaqSection />
-    </>
+      <div className="animate-fade-in-up animation-delay-200">
+        <AboutSection />
+      </div>
+      <div className="animate-fade-in-up animation-delay-400">
+        <MissionSection />
+      </div>
+      <div className="animate-fade-in-up animation-delay-600">
+        <ValuesSection />
+      </div>
+      <div className="animate-fade-in-up animation-delay-800">
+        <ServicesSection />
+      </div>
+      <div className="animate-fade-in-up animation-delay-1000">
+        <TeamsSection />
+      </div>
+      <div className="animate-fade-in-up animation-delay-1200">
+        <FaqSection />
+      </div>
+    </div>
   );
 }

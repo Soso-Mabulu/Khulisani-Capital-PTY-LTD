@@ -49,7 +49,7 @@ export default function ServicesSection() {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-colors">
+                        <Card key={index} className="flex flex-col bg-card/50 hover:bg-card/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <CardHeader>
                                  <div className="mb-4">
                                     {service.icon}

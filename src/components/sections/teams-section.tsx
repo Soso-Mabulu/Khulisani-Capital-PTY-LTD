@@ -39,7 +39,7 @@ export default function TeamsSection() {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                     {teams.map((team, index) => (
-                        <Card key={index} className="flex items-start space-x-6 p-6 bg-card/50 hover:bg-card/90 transition-colors">
+                        <Card key={index} className="flex items-start space-x-6 p-6 bg-card/50 hover:bg-card/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <div className="flex-shrink-0 mt-1">
                                 {team.icon}
                             </div>

@@ -39,7 +39,7 @@ export default function MissionSection() {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {drives.map((drive, index) => (
-                        <Card key={index} className="text-center hover:shadow-xl transition-shadow bg-card border-border/50">
+                        <Card key={index} className="text-center hover:shadow-xl transition-shadow bg-card border-border/50 hover:-translate-y-2 duration-300">
                             <CardHeader>
                                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
                                     {drive.icon}
