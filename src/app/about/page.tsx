@@ -28,8 +28,8 @@ export default function AboutPage() {
     return (
         <div className="bg-background animate-fade-in-up">
             <div className="container py-16 lg:py-24">
-                <div className="grid md:grid-cols-2 gap-16 items-center">
-                     <div className="space-y-6">
+                <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-3">
+                    <div className="lg:col-span-2 space-y-6">
                         <div className="text-left">
                              <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
                                 About Kulisani Capital
@@ -45,15 +45,18 @@ export default function AboutPage() {
                             </p>
                         </div>
                     </div>
-                    <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden group">
-                        <Image
-                          data-ai-hint="business strategy growth"
-                          src="https://picsum.photos/800/600"
-                          alt="About Kulisani Capital Team"
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="flex justify-center items-center">
+                        <div className="relative h-64 w-64 md:h-80 md:w-80 group">
+                            <Image
+                              data-ai-hint="corporate teamwork success"
+                              src="https://picsum.photos/600/600"
+                              alt="About Kulisani Capital Team"
+                              width={600}
+                              height={600}
+                              className="object-cover rounded-full shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                            />
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-full"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +74,7 @@ export default function AboutPage() {
 
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                         {drives.map((drive, index) => (
-                            <div key={index} className="flex items-start space-x-6 p-6 bg-background rounded-lg">
+                            <div key={index} className="flex items-start space-x-6 p-6 bg-background rounded-lg shadow-sm hover:shadow-lg transition-shadow">
                                 <div className="flex-shrink-0 mt-1 bg-primary/10 p-3 rounded-full">
                                     {drive.icon}
                                 </div>
