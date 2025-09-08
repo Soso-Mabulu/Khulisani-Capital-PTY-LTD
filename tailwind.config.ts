@@ -55,6 +55,26 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        // Khulisani Capital Brand Colors
+        brand: {
+          primary: '#6A0DAD',     // Primary Purple
+          accent: '#C8A2C8',      // Accent Purple/Lavender
+          black: '#000000',       // Pure Black
+          grey: '#F5F5F5',        // Light Grey
+          white: '#FFFFFF',       // Pure White
+          purple: {
+            50: '#F8F4FF',       // Very light purple tint
+            100: '#EDE4FF',      // Light purple tint
+            200: '#D6C2FF',      // Lighter purple
+            300: '#C8A2C8',      // Accent Purple (your lavender)
+            400: '#A855F7',      // Medium purple
+            500: '#6A0DAD',      // Primary Purple (your main brand)
+            600: '#5B0B92',      // Darker purple
+            700: '#4C0977',      // Much darker purple
+            800: '#3D075C',      // Very dark purple
+            900: '#2E0541',      // Almost black purple
+          }
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

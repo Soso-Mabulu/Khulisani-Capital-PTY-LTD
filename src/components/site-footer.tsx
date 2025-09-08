@@ -11,60 +11,128 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function SiteFooter() {
   return (
-    <footer id="contact-section" className="bg-card text-card-foreground border-t">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex flex-col space-y-4 md:col-span-1">
-            <Logo />
-            <p className="text-sm text-muted-foreground">
-                Empowering businesses with precision-driven financial and strategic advisory solutions.
+    <footer id="contact-section" className="relative bg-white overflow-hidden">
+      {/* Modern gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-primary"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+      
+      {/* Floating accent elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-1/4 w-24 h-24 bg-brand-accent/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/3 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-3/4 w-20 h-20 bg-brand-primary/20 rounded-full blur-lg animate-pulse" style={{animationDelay: '4s'}}></div>
+      </div>
+      
+      <div className="container py-6 lg:py-8 relative z-10">
+        {/* Streamlined main content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Company info - simplified */}
+          <div className="space-y-4">
+            <div className="hover-brand-lift">
+              <Logo />
+            </div>
+            <p className="text-white/80 leading-relaxed max-w-lg">
+              Empowering businesses with precision-driven financial solutions that drive sustainable growth.
             </p>
+            
+            {/* Compact contact info */}
+            <div className="flex flex-wrap gap-6 pt-2">
+              <a href="mailto:info@kulisani.co.za" className="text-white/70 hover:text-brand-accent transition-colors text-sm">
+                info@kulisani.co.za
+              </a>
+              <a href="tel:+27123456789" className="text-white/70 hover:text-brand-accent transition-colors text-sm">
+                +27 12 345 6789
+              </a>
+              <span className="text-white/70 text-sm">Pretoria, South Africa</span>
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:col-span-3">
-            <div>
-              <h3 className="font-headline font-semibold text-foreground">Navigate</h3>
-              <ul className="mt-4 space-y-2">
-                <li><Link href="/#about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
-                <li><Link href="/#services" className="text-sm text-muted-foreground hover:text-primary">Services</Link></li>
-                <li><Link href="/#teams" className="text-sm text-muted-foreground hover:text-primary">Teams</Link></li>
-                <li><Link href="/careers" className="text-sm text-muted-foreground hover:text-primary">Careers</Link></li>
+          
+          {/* Navigation - streamlined */}
+          <div className="grid grid-cols-2 gap-6">
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="font-headline font-medium text-white relative text-sm">
+                Quick Links
+                <div className="absolute -bottom-1 left-0 w-6 h-0.5 bg-brand-accent rounded-full"></div>
+              </h3>
+              <ul className="space-y-2">
+                {[
+                  { label: 'About', href: '/#about' },
+                  { label: 'Services', href: '/#services' },
+                  { label: 'Team', href: '/#teams' },
+                  { label: 'Contact', href: '/contact' }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={link.href} 
+                      className="text-white/70 hover:text-white transition-all duration-300 hover:translate-x-1 text-sm inline-block"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div>
-              <h3 className="font-headline font-semibold text-foreground">Legal</h3>
-              <ul className="mt-4 space-y-2">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-headline font-semibold text-foreground">Contact Us</h3>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><a href="mailto:info@kulisani.co.za" className="hover:text-primary">info@kulisani.co.za</a></li>
-                <li><a href="tel:+27123456789" className="hover:text-primary">+27 12 345 6789</a></li>
-                <li>Pretoria, South Africa</li>
+            
+            {/* Services */}
+            <div className="space-y-4">
+              <h3 className="font-headline font-medium text-white relative text-sm">
+                Services
+                <div className="absolute -bottom-1 left-0 w-6 h-0.5 bg-brand-accent rounded-full"></div>
+              </h3>
+              <ul className="space-y-2">
+                {[
+                  'Tax Advisory',
+                  'Audit Services',
+                  'Valuations',
+                  'Financial Modeling'
+                ].map((service, index) => (
+                  <li key={index}>
+                    <span className="text-white/70 text-sm">
+                      {service}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Kulisani Capital (Pty) Ltd. All rights reserved.</p>
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Twitter"><Twitter className="h-4 w-4" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Facebook"><Facebook className="h-4 w-4" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Instagram"><Instagram className="h-4 w-4" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="TikTok"><TikTokIcon className="h-4 w-4" /></a>
-            </Button>
+        
+        {/* Bottom section - simplified */}
+        <div className="pt-6 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <p className="text-white/60 text-sm text-center sm:text-left">
+              &copy; {new Date().getFullYear()} Kulisani Capital (Pty) Ltd. All rights reserved.
+            </p>
+            
+            {/* Social media - compact */}
+            <div className="flex items-center gap-2">
+              {[
+                { icon: Twitter, label: "Twitter", href: "#" },
+                { icon: Facebook, label: "Facebook", href: "#" },
+                { icon: Linkedin, label: "LinkedIn", href: "#" },
+                { icon: Instagram, label: "Instagram", href: "#" },
+                { icon: TikTokIcon, label: "TikTok", href: "#" }
+              ].map((social, index) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-8 h-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-white/70 hover:text-white hover:bg-brand-accent/20 hover:border-brand-accent/30 hover:scale-110 transition-all duration-300 group"
+                >
+                  <social.icon className="h-3.5 w-3.5 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
