@@ -57,16 +57,32 @@ export default function ContactPage() {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
-      content: "+27 12 345 6789",
-      subtitle: "Mon-Fri, 8:00 AM - 6:00 PM",
-      href: "tel:+27123456789",
+      content: "+27 72 224 3956",
+      subtitle: "Paris Absa - Primary Contact",
+      href: "tel:+27722243956",
       color: "from-green-500 to-green-600"
+    },
+    {
+      icon: <Phone className="h-6 w-6" />,
+      title: "Alternative",
+      content: "+27 82 338 2653",
+      subtitle: "Xhanti Absa Wits",
+      href: "tel:+27823382653",
+      color: "from-teal-500 to-teal-600"
+    },
+    {
+      icon: <Phone className="h-6 w-6" />,
+      title: "Alternative",
+      content: "+27 83 979 5640",
+      subtitle: "Mpho Bopape",
+      href: "tel:+27839795640",
+      color: "from-cyan-500 to-cyan-600"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
-      content: "Pretoria, South Africa",
-      subtitle: "Schedule an appointment",
+      content: "109 Leeuwkop Rd, 123 The Kanyin",
+      subtitle: "Sandton, Gauteng, 2191",
       href: "#",
       color: "from-purple-500 to-purple-600"
     },

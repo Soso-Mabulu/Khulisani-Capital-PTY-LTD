@@ -119,7 +119,7 @@ export function OpportunityModal({
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'Full-time': return 'bg-emerald-100 text-emerald-800 border-emerald-200';
-      case 'Part-time': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'Part-time': return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'Contract': return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'Internship': return 'bg-pink-100 text-pink-800 border-pink-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';

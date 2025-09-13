@@ -215,7 +215,7 @@ html {
     border-radius: inherit;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
-    animation: rotate 3s linear infinite;
+    /* animation: rotate 3s linear infinite; - Removed rotation */
   }
   
   @keyframes rotate {
@@ -228,9 +228,9 @@ html {
   }
   
   @keyframes float-brand {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-10px) rotate(1deg); }
-    66% { transform: translateY(-5px) rotate(-1deg); }
+    0%, 100% { transform: translateY(0px); }
+    33% { transform: translateY(-10px); }
+    66% { transform: translateY(-5px); }
   }
   
   /* Ripple Effect */

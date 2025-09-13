@@ -1,5 +1,35 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { BookOpenCheck, Scaling, Receipt, ShieldCheck, AreaChart, Cog } from "lucide-react";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Financial Services | Accounting, Tax, Valuations & Strategic Consulting',
+  description: 'Comprehensive financial services including accounting & technical advisory, tax advisory, business valuations, due diligence, audit readiness, financial modelling and business automation solutions.',
+  keywords: [
+    'accounting services Sandton',
+    'tax advisory South Africa',
+    'business valuations',
+    'due diligence services',
+    'IFRS implementation',
+    'audit readiness',
+    'financial modelling',
+    'business automation',
+    'technical advisory',
+    'strategic consulting',
+    'financial reporting',
+    'tax compliance',
+    'corporate finance'
+  ],
+  openGraph: {
+    title: 'Financial Services | Accounting, Tax, Valuations & Strategic Consulting',
+    description: 'Expert financial services including accounting, tax advisory, business valuations, due diligence, and strategic consulting. Professional solutions for businesses across South Africa.',
+    url: 'https://khulisanicapital.com/services',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://khulisanicapital.com/services',
+  },
+};
 
 const services = [
     {

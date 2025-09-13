@@ -44,14 +44,22 @@ export function SiteFooter() {
             </p>
             
             {/* Compact contact info */}
-            <div className="flex flex-wrap gap-6 pt-2">
-              <a href="mailto:info@kulisani.co.za" className="text-white/70 hover:text-brand-accent transition-colors text-sm">
+            <div className="space-y-2 pt-2">
+              <a href="mailto:info@kulisani.co.za" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
                 info@kulisani.co.za
               </a>
-              <a href="tel:+27123456789" className="text-white/70 hover:text-brand-accent transition-colors text-sm">
-                +27 12 345 6789
-              </a>
-              <span className="text-white/70 text-sm">Pretoria, South Africa</span>
+              <div className="space-y-1">
+                <a href="tel:+27722243956" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
+                  +27 72 224 3956 (Paris Absa)
+                </a>
+                <a href="tel:+27823382653" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
+                  +27 82 338 2653 (Xhanti Absa Wits)
+                </a>
+                <a href="tel:+27839795640" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
+                  +27 83 979 5640 (Mpho Bopape)
+                </a>
+              </div>
+              <span className="text-white/70 text-sm block">109 Leeuwkop Rd, 123 The Kanyin, Sandton, Gauteng, 2191</span>
             </div>
           </div>
           
@@ -65,7 +73,7 @@ export function SiteFooter() {
               </h3>
               <ul className="space-y-2">
                 {[
-                  { label: 'About', href: '/#about' },
+                  { label: 'About', href: '/about' },
                   { label: 'Services', href: '/#services' },
                   { label: 'Team', href: '/#teams' },
                   { label: 'Contact', href: '/contact' }
