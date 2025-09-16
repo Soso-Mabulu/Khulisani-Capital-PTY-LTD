@@ -7,13 +7,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://khulisanicapital.com'),
+  metadataBase: new URL('https://kulisanicapital.com'),
   title: {
-    default: 'Khulisani Capital | Leading Financial Advisory & Strategic Consulting in South Africa',
-    template: '%s | Khulisani Capital - Expert Financial Advisory Services'
+    default: 'Kulisani Capital | Leading Financial Advisory & Strategic Consulting in South Africa',
+    template: '%s | Kulisani Capital - Expert Financial Advisory Services'
   },
-  description: 'Khulisani Capital (Pty) Ltd - Premier financial advisory firm in Sandton, South Africa. Expert accounting, tax advisory, business valuations, due diligence, IFRS compliance, and strategic consulting services. 30+ years combined experience.',
+  description: 'Kulisani Capital (Pty) Ltd - Premier financial advisory firm in Sandton, South Africa. Expert accounting, tax advisory, business valuations, due diligence, IFRS compliance, and strategic consulting services. 30+ years combined experience.',
   keywords: [
+    'Kulisani Capital',
     'financial advisory South Africa',
     'accounting services Sandton',
     'tax advisory Gauteng',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     'financial modelling',
     'business automation',
     'chartered accountants',
-    'Khulisani Capital',
+    'Kulisani Capital Sandton',
     'strategic consulting',
     'corporate finance',
     'financial planning',
@@ -33,11 +34,15 @@ export const metadata: Metadata = {
     'investment advisory',
     'business consulting Johannesburg',
     'financial solutions',
-    'professional services firm'
+    'professional services firm',
+    'Kulisani Capital financial advisory',
+    'chartered accountants Gauteng',
+    'financial consultants South Africa',
+    'Kulisani Capital services'
   ],
-  authors: [{ name: 'Khulisani Capital Team' }],
-  creator: 'Khulisani Capital (Pty) Ltd',
-  publisher: 'Khulisani Capital',
+  authors: [{ name: 'Kulisani Capital Team' }],
+  creator: 'Kulisani Capital (Pty) Ltd',
+  publisher: 'Kulisani Capital',
   category: 'Financial Services',
   classification: 'Business',
   robots: {
@@ -54,34 +59,34 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
-    url: 'https://khulisanicapital.com',
-    siteName: 'Khulisani Capital',
-    title: 'Khulisani Capital | Leading Financial Advisory & Strategic Consulting in South Africa',
+    url: 'https://kulisanicapital.com',
+    siteName: 'Kulisani Capital',
+    title: 'Kulisani Capital | Leading Financial Advisory & Strategic Consulting in South Africa',
     description: 'Premier financial advisory firm in Sandton, South Africa. Expert accounting, tax advisory, business valuations, due diligence, and strategic consulting services with 30+ years combined experience.',
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Khulisani Capital - Financial Advisory & Strategic Consulting',
+        alt: 'Kulisani Capital - Financial Advisory & Strategic Consulting',
         type: 'image/png',
       },
       {
         url: '/android-chrome-512x512.png',
         width: 512,
         height: 512,
-        alt: 'Khulisani Capital Logo',
+        alt: 'Kulisani Capital Logo',
         type: 'image/png',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Khulisani Capital | Leading Financial Advisory & Strategic Consulting',
+    title: 'Kulisani Capital | Leading Financial Advisory & Strategic Consulting',
     description: 'Premier financial advisory firm in Sandton, South Africa. Expert accounting, tax advisory, business valuations, and strategic consulting services.',
     images: ['/logo.png'],
-    creator: '@KhulisaniCapital',
-    site: '@KhulisaniCapital',
+    creator: '@KulisaniCapital',
+    site: '@KulisaniCapital',
   },
   icons: {
     icon: [
@@ -108,7 +113,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   alternates: {
-    canonical: 'https://khulisanicapital.com',
+    canonical: 'https://kulisanicapital.com',
   },
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
@@ -125,7 +130,7 @@ export const metadata: Metadata = {
     'business:contact_data:postal_code': '2191',
     'business:contact_data:country_name': 'South Africa',
     'business:contact_data:phone_number': '+27722243956',
-    'business:contact_data:email': 'info@khulisanicapital.com',
+    'business:contact_data:email': 'info@kulisanicapital.com',
   },
 };
 
@@ -146,9 +151,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Khulisani Capital (Pty) Ltd",
-              "url": "https://khulisanicapital.com",
-              "logo": "https://khulisanicapital.com/logo.png",
+              "name": "Kulisani Capital (Pty) Ltd",
+              "url": "https://kulisanicapital.com",
+              "logo": "https://kulisanicapital.com/logo.png",
               "description": "Premier financial advisory firm in Sandton, South Africa. Expert accounting, tax advisory, business valuations, due diligence, and strategic consulting services.",
               "address": {
                 "@type": "PostalAddress",
@@ -168,7 +173,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "ContactPoint",
-                  "email": "info@khulisanicapital.com",
+                  "email": "info@kulisanicapital.com",
                   "contactType": "customer service"
                 }
               ],
@@ -178,9 +183,9 @@ export default function RootLayout({
                 "longitude": "28.0567"
               },
               "sameAs": [
-                "https://www.linkedin.com/company/khulisani-capital",
-                "https://twitter.com/KhulisaniCapital",
-                "https://www.facebook.com/KhulisaniCapital"
+                "https://www.linkedin.com/company/kulisani-capital",
+                "https://twitter.com/KulisaniCapital",
+                "https://www.facebook.com/KulisaniCapital"
               ],
               "foundingDate": "2024",
               "numberOfEmployees": "10-50",

@@ -3,10 +3,10 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Khulisani Capital | Our Story, Mission & Vision',
-  description: 'Learn about Khulisani Capital - Founded by seasoned Chartered Accountants with 30+ years combined experience. Our mission, vision, and commitment to delivering world-class financial solutions in South Africa.',
+  title: 'About Kulisani Capital | Our Story, Mission & Vision',
+  description: 'Learn about Kulisani Capital - Founded by seasoned Chartered Accountants with 30+ years combined experience. Our mission, vision, and commitment to delivering world-class financial solutions in South Africa.',
   keywords: [
-    'about Khulisani Capital',
+    'about Kulisani Capital',
     'chartered accountants South Africa',
     'financial advisory team',
     'company mission vision',
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     'financial expertise South Africa'
   ],
   openGraph: {
-    title: 'About Khulisani Capital | Our Story, Mission & Vision',
+    title: 'About Kulisani Capital | Our Story, Mission & Vision',
     description: 'Founded by seasoned Chartered Accountants with 30+ years combined experience. Discover our mission to empower businesses with world-class financial solutions.',
-    url: 'https://khulisanicapital.com/about',
+    url: 'https://kulisanicapital.com/about',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://khulisanicapital.com/about',
+    canonical: 'https://kulisanicapital.com/about',
   },
 };
 

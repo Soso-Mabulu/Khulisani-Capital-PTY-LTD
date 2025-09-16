@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Khulisani Capital | Get Expert Financial Advisory Today',
-  description: 'Contact Khulisani Capital for expert financial advisory services. Located in Sandton, Gauteng. Call +27 72 224 3956 or email info@khulisanicapital.com. Professional consultation available.',
+  title: 'Contact Kulisani Capital | Get Expert Financial Advisory Today',
+  description: 'Contact Kulisani Capital for expert financial advisory services. Located in Sandton, Gauteng. Call +27 72 224 3956 or email info@kulisanicapital.com. Professional consultation available.',
   keywords: [
-    'contact Khulisani Capital',
+    'contact Kulisani Capital',
     'financial advisor Sandton',
     'business consultation',
     'accounting consultation',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     'financial expert consultation'
   ],
   openGraph: {
-    title: 'Contact Khulisani Capital | Get Expert Financial Advisory Today',
+    title: 'Contact Kulisani Capital | Get Expert Financial Advisory Today',
     description: 'Get in touch with our financial experts. Located in Sandton, Gauteng. Professional consultation and advisory services available.',
-    url: 'https://khulisanicapital.com/contact',
+    url: 'https://kulisanicapital.com/contact',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://khulisanicapital.com/contact',
+    canonical: 'https://kulisanicapital.com/contact',
   },
 };
 

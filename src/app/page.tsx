@@ -14,7 +14,7 @@ export default function Home() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What services does Khulisani Capital offer?",
+        "name": "What services does Kulisani Capital offer?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We offer comprehensive financial services including Accounting & Technical Advisory, Tax Advisory, Business Valuations, Due Diligence, Audit Readiness & Review, Financial Modelling & Forecasting, and Business Automation & IT Solutions."
@@ -25,7 +25,7 @@ export default function Home() {
         "name": "How can I request a consultation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can reach out to us via our Contact Us page or email us directly at info@khulisanicapital.com. Once we understand your needs, we'll tailor a proposal or engagement plan that suits your business objectives."
+          "text": "You can reach out to us via our Contact Us page or email us directly at info@kulisanicapital.com. Once we understand your needs, we'll tailor a proposal or engagement plan that suits your business objectives."
         }
       },
       {
@@ -42,11 +42,11 @@ export default function Home() {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Khulisani Capital (Pty) Ltd",
+    "name": "Kulisani Capital (Pty) Ltd",
     "description": "Premier financial advisory firm specializing in accounting, tax advisory, business valuations, and strategic consulting services.",
-    "url": "https://khulisanicapital.com",
+    "url": "https://kulisanicapital.com",
     "telephone": "+27-72-224-3956",
-    "email": "info@khulisanicapital.com",
+    "email": "info@kulisanicapital.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "109 Leeuwkop Rd, 123 The Kanyin",

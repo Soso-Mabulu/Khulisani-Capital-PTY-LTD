@@ -3,9 +3,10 @@ import { BookOpenCheck, Scaling, Receipt, ShieldCheck, AreaChart, Cog } from "lu
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Financial Services | Accounting, Tax, Valuations & Strategic Consulting',
-  description: 'Comprehensive financial services including accounting & technical advisory, tax advisory, business valuations, due diligence, audit readiness, financial modelling and business automation solutions.',
+  title: 'Financial Services | Kulisani Capital - Accounting, Tax, Valuations & Strategic Consulting',
+  description: 'Kulisani Capital offers comprehensive financial services including accounting & technical advisory, tax advisory, business valuations, due diligence, audit readiness, financial modelling and business automation solutions.',
   keywords: [
+    'Kulisani Capital services',
     'accounting services Sandton',
     'tax advisory South Africa',
     'business valuations',
@@ -18,16 +19,18 @@ export const metadata: Metadata = {
     'strategic consulting',
     'financial reporting',
     'tax compliance',
-    'corporate finance'
+    'corporate finance',
+    'Kulisani Capital financial advisory',
+    'chartered accountants Sandton'
   ],
   openGraph: {
-    title: 'Financial Services | Accounting, Tax, Valuations & Strategic Consulting',
-    description: 'Expert financial services including accounting, tax advisory, business valuations, due diligence, and strategic consulting. Professional solutions for businesses across South Africa.',
-    url: 'https://khulisanicapital.com/services',
+    title: 'Kulisani Capital Financial Services | Accounting, Tax, Valuations & Strategic Consulting',
+    description: 'Kulisani Capital provides expert financial services including accounting, tax advisory, business valuations, due diligence, and strategic consulting. Professional solutions for businesses across South Africa.',
+    url: 'https://kulisanicapital.com/services',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://khulisanicapital.com/services',
+    canonical: 'https://kulisanicapital.com/services',
   },
 };
 

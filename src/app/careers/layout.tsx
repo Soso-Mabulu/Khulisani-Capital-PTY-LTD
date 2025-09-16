@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers at Khulisani Capital | Join Our Financial Advisory Team',
-  description: 'Explore career opportunities at Khulisani Capital. Join our team of financial experts in Sandton. Full-time positions, internships, and graduate programs available in accounting, tax, and financial advisory.',
+  title: 'Careers at Kulisani Capital | Join Our Financial Advisory Team',
+  description: 'Explore career opportunities at Kulisani Capital. Join our team of financial experts in Sandton. Full-time positions, internships, and graduate programs available in accounting, tax, and financial advisory.',
   keywords: [
-    'careers Khulisani Capital',
+    'careers Kulisani Capital',
     'financial jobs South Africa',
     'accounting jobs Sandton',
     'chartered accountant careers',
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     'career opportunities'
   ],
   openGraph: {
-    title: 'Careers at Khulisani Capital | Join Our Financial Advisory Team',
-    description: 'Explore exciting career opportunities at Khulisani Capital. Join our team of financial experts and grow your career in accounting, tax, and strategic consulting.',
-    url: 'https://khulisanicapital.com/careers',
+    title: 'Careers at Kulisani Capital | Join Our Financial Advisory Team',
+    description: 'Explore exciting career opportunities at Kulisani Capital. Join our team of financial experts and grow your career in accounting, tax, and strategic consulting.',
+    url: 'https://kulisanicapital.com/careers',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://khulisanicapital.com/careers',
+    canonical: 'https://kulisanicapital.com/careers',
   },
 };
 
