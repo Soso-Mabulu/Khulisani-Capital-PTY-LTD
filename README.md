@@ -347,12 +347,12 @@ This project is proprietary software belonging to Kulisani Capital (Pty) Ltd. Al
 
 **Kulisani Capital (Pty) Ltd**
 
-- 📧 Email: info@kulisani.co.za
-- 📱 Phone: +27 72 224 3956 (Paris Absa)
-- 📱 Alternative: +27 82 338 2653 (Xhanti Absa Wits)
-- 📱 Alternative: +27 83 979 5640 (Mpho Bopape)
+- 📧 Email: info@kulisanicapital.com
+- 📱 Phone: +27 72 224 3956 (Primary Contact)
+- 📱 Alternative: +27 82 338 2653 (Alternative Contact)
+- 📱 Alternative: +27 83 979 5640 (Alternative Contact)
 - 📍 Location: 109 Leeuwkop Rd, 123 The Kanyin, Sandton, Gauteng, 2191
-- 🌐 Website: [kulisani.co.za](https://kulisani.co.za)
+- 🌐 Website: [kulisanicapital.com](https://kulisanicapital.com)
 
 **Development Support**
 For technical issues or questions about the website, please contact the development team or create an issue in the repository.

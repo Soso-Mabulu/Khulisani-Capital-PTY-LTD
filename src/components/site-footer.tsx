@@ -45,8 +45,8 @@ export function SiteFooter() {
             
             {/* Compact contact info */}
             <div className="space-y-2 pt-2">
-              <a href="mailto:info@kulisani.co.za" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
-                info@kulisani.co.za
+              <a href="mailto:info@kulisanicapital.com" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
+                info@kulisanicapital.com
               </a>
               <div className="space-y-1">
                 <a href="tel:+27722243956" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">

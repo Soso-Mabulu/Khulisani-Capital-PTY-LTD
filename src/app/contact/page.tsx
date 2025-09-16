@@ -49,9 +49,9 @@ export default function ContactPage() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
-      content: "info@kulisani.co.za",
+      content: "info@kulisanicapital.com",
       subtitle: "We'll respond within 24 hours",
-      href: "mailto:info@kulisani.co.za",
+      href: "mailto:info@kulisanicapital.com",
       color: "from-blue-500 to-blue-600"
     },
     {

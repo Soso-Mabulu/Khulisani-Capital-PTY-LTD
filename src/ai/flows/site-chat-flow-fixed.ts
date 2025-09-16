@@ -46,7 +46,7 @@ Kulisani Capital (Pty) Ltd is a boutique professional services firm with over 30
 - Business Automation & IT Solutions
 
 **CONTACT**
-Email: info@kulisani.co.za | Phone: +27 12 345 6789 | Location: Pretoria, South Africa
+Email: info@kulisanicapital.com | Phone: +27 12 345 6789 | Location: Pretoria, South Africa
 
 Please respond professionally to: ${message}`;
 
@@ -54,7 +54,7 @@ Please respond professionally to: ${message}`;
 
     return (
       response.text ||
-      "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at info@kulisani.co.za."
+      "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at info@kulisanicapital.com."
     );
   }
 );
@@ -64,6 +64,6 @@ export async function siteChat(input: SiteChatInput): Promise<SiteChatOutput> {
     return await siteChatFlow(input);
   } catch (error) {
     console.error("Site Chat Error:", error);
-    return "I'm currently experiencing technical difficulties. Please contact us directly at info@kulisani.co.za or call +27 12 345 6789 for immediate assistance.";
+    return "I'm currently experiencing technical difficulties. Please contact us directly at info@kulisanicapital.com or call +27 12 345 6789 for immediate assistance.";
   }
 }
