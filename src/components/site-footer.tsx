@@ -50,13 +50,13 @@ export function SiteFooter() {
               </a>
               <div className="space-y-1">
                 <a href="tel:+27722243956" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
-                  +27 72 224 3956 (Paris Absa)
+                  +27 72 224 3956
                 </a>
                 <a href="tel:+27823382653" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
-                  +27 82 338 2653 (Xhanti Absa Wits)
+                  +27 82 338 2653
                 </a>
                 <a href="tel:+27839795640" className="text-white/70 hover:text-brand-accent transition-colors text-sm block">
-                  +27 83 979 5640 (Mpho Bopape)
+                  +27 83 979 5640
                 </a>
               </div>
               <span className="text-white/70 text-sm block">109 Leeuwkop Rd, 123 The Kanyin, Sandton, Gauteng, 2191</span>

@@ -58,7 +58,7 @@ export default function ContactPage() {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
       content: "+27 72 224 3956",
-      subtitle: "Paris Absa - Primary Contact",
+      subtitle: "Primary Contact Number",
       href: "tel:+27722243956",
       color: "from-green-500 to-green-600"
     },
@@ -66,7 +66,7 @@ export default function ContactPage() {
       icon: <Phone className="h-6 w-6" />,
       title: "Alternative",
       content: "+27 82 338 2653",
-      subtitle: "Xhanti Absa Wits",
+      subtitle: "Alternative Contact Number",
       href: "tel:+27823382653",
       color: "from-teal-500 to-teal-600"
     },
@@ -74,7 +74,7 @@ export default function ContactPage() {
       icon: <Phone className="h-6 w-6" />,
       title: "Alternative",
       content: "+27 83 979 5640",
-      subtitle: "Mpho Bopape",
+      subtitle: "Alternative Contact Number",
       href: "tel:+27839795640",
       color: "from-cyan-500 to-cyan-600"
     },
