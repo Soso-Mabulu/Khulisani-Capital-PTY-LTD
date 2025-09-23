@@ -1,56 +1,95 @@
-import { Award, Zap, Handshake, Lightbulb, TrendingUp } from "lucide-react";
+import { Award, Users, Layers, Unlock, Lightbulb, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 const values = [
     {
-        icon: <Award className="h-8 w-8 text-primary" />,
+        icon: <Award className="h-6 w-6 text-brand-primary" />,
         title: "Excellence",
-        description: "We uphold the highest professional and ethical standards, delivering work that reflects integrity, precision, and deep expertise."
+        description: "We uphold the highest professional and ethical standards, delivering work that reflects integrity and precision.",
+        color: "bg-blue-50",
+        iconBg: "bg-blue-100"
     },
     {
-        icon: <Zap className="h-8 w-8 text-primary" />,
-        title: "Efficiency",
-        description: "We prioritize speed and simplicity — producing high-quality outcomes with minimal friction, so our clients can move forward with confidence."
+        icon: <Users className="h-6 w-6 text-brand-primary" />,
+        title: "Community",
+        description: "We value relationships and create spaces where clients feel understood and supported.",
+        color: "bg-green-50",
+        iconBg: "bg-green-100"
     },
     {
-        icon: <Handshake className="h-8 w-8 text-primary" />,
-        title: "Partnership",
-        description: "We believe in collaboration. By working closely with our clients, we co-create solutions that address real business challenges and unlock long-term value."
+        icon: <Layers className="h-6 w-6 text-brand-primary" />,
+        title: "Simplicity",
+        description: "We turn complex financial concepts into clear, actionable steps that anyone can follow.",
+        color: "bg-purple-50",
+        iconBg: "bg-purple-100"
     },
     {
-        icon: <Lightbulb className="h-8 w-8 text-primary" />,
+        icon: <Unlock className="h-6 w-6 text-brand-primary" />,
+        title: "Accessibility",
+        description: "We remain approachable and responsive, ensuring every client receives our full attention.",
+        color: "bg-orange-50",
+        iconBg: "bg-orange-100"
+    },
+    {
+        icon: <Lightbulb className="h-6 w-6 text-brand-primary" />,
         title: "Innovation",
-        description: "We embrace technology as a catalyst for smarter decisions. From automation to advanced analytics, we continuously evolve to stay ahead of the curve."
+        description: "We embrace technology as a tool for smarter decisions and continuous improvement.",
+        color: "bg-yellow-50",
+        iconBg: "bg-yellow-100"
     },
     {
-        icon: <TrendingUp className="h-8 w-8 text-primary" />,
+        icon: <TrendingUp className="h-6 w-6 text-brand-primary" />,
         title: "Impact",
-        description: "We exist to elevate African businesses through world-class financial advisory. Our mission is to build stronger, more resilient enterprises that shape the continent’s future."
+        description: "Our mission is to build stronger, more resilient businesses that create lasting value.",
+        color: "bg-pink-50",
+        iconBg: "bg-pink-100"
     }
 ];
 
 export default function ValuesSection() {
     return (
-        <section id="values" className="py-16 lg:py-24 bg-card">
-            <div className="container">
-                <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                        Our Values
+        <section id="values" className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-3 py-1.5 rounded-full text-sm mb-4">
+                        <Award className="w-3 h-3" />
+                        <span>Our Values</span>
+                    </div>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-brand-black mb-4">
+                        The Principles That 
+                        <span className="block text-brand-primary">Guide Our Growth</span>
                     </h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        Our values are the foundation of everything we do. They guide our approach and define our impact.
+                    <p className="text-base text-brand-black/70 max-w-2xl mx-auto">
+                        Our values are the foundation of everything we do, guiding our approach and ensuring meaningful relationships.
                     </p>
                 </div>
 
-                <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     {values.map((value, index) => (
-                        <div key={index} className="relative p-6 rounded-lg bg-background transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                            <div className="mb-4">
-                                {value.icon}
+                        <div key={index} className="group p-6 rounded-xl bg-white border border-gray-200 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300">
+                            <div className="space-y-4">
+                                <div className={`w-12 h-12 rounded-lg ${value.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                                    {value.icon}
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="font-semibold text-lg text-brand-black group-hover:text-brand-primary transition-colors">
+                                        {value.title}
+                                    </h3>
+                                    <p className="text-sm text-brand-black/70 leading-relaxed">
+                                        {value.description}
+                                    </p>
+                                </div>
                             </div>
-                            <h3 className="font-headline text-lg font-bold text-foreground">{value.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                     ))}
+                </div>
+
+                <div className="text-center">
+                    <div className="inline-block bg-brand-purple-50 px-6 py-3 rounded-full">
+                        <span className="text-brand-black text-sm font-medium">
+                            These values drive us to deliver exceptional results while building lasting partnerships
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>

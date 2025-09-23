@@ -1,88 +1,134 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Briefcase, BarChart } from "lucide-react";
-
-const aboutItems = [
-    {
-        icon: <Users className="h-8 w-8 text-brand-primary" />,
-        title: "Expert Team",
-        description: "Founded by Chartered Accountants with over 30 years of combined experience."
-    },
-    {
-        icon: <Briefcase className="h-8 w-8 text-brand-primary" />,
-        title: "Comprehensive Services",
-        description: "Specializing in tax, audit, accounting, valuations, due diligence, and more."
-    },
-    {
-        icon: <BarChart className="h-8 w-8 text-brand-primary" />,
-        title: "Driving Growth",
-        description: "Delivering actionable intelligence that drives growth and resilience for our clients."
-    }
-]
+import { Users, Heart, Lightbulb, Target } from "lucide-react";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-16 lg:py-24 bg-brand-gradient-about relative overflow-hidden">
-            {/* Decorative floating elements */}
-            <div className="absolute inset-0">
-                <div className="absolute top-1/4 left-10 w-24 h-24 bg-brand-accent/10 rounded-full blur-xl float-brand"></div>
-                <div className="absolute bottom-1/3 right-16 w-36 h-36 bg-brand-primary/5 rounded-full blur-2xl float-brand" style={{animationDelay: '2s'}}></div>
-            </div>
-            
-            <div className="container relative z-10">
-                <div className="grid md:grid-cols-2 gap-16 items-center">
-                    <div className="relative group">
-                        <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-brand-xl hover-brand-lift">
-                            <Image
-                              data-ai-hint="business analytics abstract"
-                              src="https://picsum.photos/600/800"
-                              alt="About Kulisani Capital"
-                              fill
-                              className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            {/* Gradient overlays for depth */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/30 via-transparent to-transparent"></div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-brand-accent/10 to-brand-primary/20"></div>
+        <section id="about" className="py-16 bg-white relative overflow-hidden">
+            <div className="container mx-auto px-4">
+                {/* Section Header */}
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-3 py-1.5 rounded-full text-sm mb-4">
+                        <Heart className="w-3 h-3" />
+                        <span>About Kulisani Capital</span>
+                    </div>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-brand-black mb-4">
+                        Nurturing Growth Through 
+                        <span className="block text-brand-primary">Strategic Excellence</span>
+                    </h2>
+                    <p className="text-base text-brand-black/70 max-w-2xl mx-auto">
+                        Kulisani, a word from the Nguni language meaning "to nurture and grow," captures our purpose: 
+                        helping businesses flourish through precision-driven financial advisory.
+                    </p>
+                </div>
+
+                {/* Main Content Grid */}
+                <div className="grid lg:grid-cols-3 gap-6 mb-16">
+                    {/* Images Column */}
+                    <div className="grid grid-cols-2 gap-3">
+                        <div className="space-y-3">
+                            <div className="relative h-40">
+                                <Image
+                                    src="/images/intercultural-hand-shake-outdoor.jpg"
+                                    alt="Professional handshake"
+                                    fill
+                                    className="rounded-lg object-cover"
+                                />
+                            </div>
+                            <div className="relative h-32">
+                                <Image
+                                    src="/images/woman-8797459_1280.jpg"
+                                    alt="Professional woman"
+                                    fill
+                                    className="rounded-lg object-cover"
+                                />
+                            </div>
                         </div>
-                        {/* Floating accent elements around image */}
-                        <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-brand-gradient-primary rounded-full shadow-brand-lg float-brand opacity-80"></div>
-                        <div className="absolute -top-6 -left-6 w-12 h-12 bg-brand-accent rounded-full shadow-brand float-brand" style={{animationDelay: '1s'}}></div>
+                        <div className="space-y-3 mt-4">
+                            <div className="relative h-32">
+                                <Image
+                                    src="/images/man-colleagues-talking-selfie-picture-after-successful-briefing-meeting.jpg"
+                                    alt="Team celebration"
+                                    fill
+                                    className="rounded-lg object-cover"
+                                />
+                            </div>
+                            <div className="relative h-40">
+                                <Image
+                                    src="/images/nairobi-109492_1280.jpg"
+                                    alt="African cityscape"
+                                    fill
+                                    className="rounded-lg object-cover"
+                                />
+                            </div>
+                        </div>
                     </div>
                     
-                     <div className="space-y-10">
-                        <div className="text-left">
-                             <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-black sm:text-4xl mb-4">
-                                <span className="text-brand-gradient-vibrant">Precision-Driven</span> Advisory
-                            </h2>
-                            <div className="w-16 h-1 bg-brand-gradient-primary rounded-full mb-6"></div>
-                            <p className="text-lg leading-relaxed text-gray-600">
-                                Kulisani Capital is a boutique professional services firm dedicated to empowering businesses with innovative financial and strategic solutions.
+                    {/* Content Columns */}
+                    <div className="lg:col-span-2 space-y-6">
+                        <div className="space-y-4">
+                            <h3 className="text-xl font-bold text-brand-black">
+                                Boutique Professional Services with Global Standards
+                            </h3>
+                            <p className="text-sm text-brand-black/70 leading-relaxed">
+                                Kulisani Capital is a boutique professional services firm committed to providing innovative 
+                                financial and strategic solutions that feel approachable and accessible. We deliver excellence 
+                                and quality with a focus on clarity, simplicity, and strong community relationships.
                             </p>
                         </div>
                         
-                        <div className="space-y-8">
-                            {aboutItems.map((item, index) => (
-                                <div key={index} className="group flex items-start space-x-6 hover-brand-lift p-6 rounded-xl hover:bg-brand-gradient-card transition-all duration-500 border border-transparent hover:border-brand-accent/30">
-                                    <div className="flex-shrink-0 bg-brand-gradient-accent p-4 rounded-xl shadow-brand group-hover:shadow-brand-lg group-hover:scale-110 transition-all duration-300">
-                                        {item.icon}
+                        {/* Highlights Grid */}
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            <Card className="border-brand-accent/20">
+                                <CardContent className="p-4">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <Heart className="h-5 w-5 text-brand-primary" />
+                                        <h4 className="font-semibold text-sm text-brand-black">Kulisani Means Growth</h4>
                                     </div>
-                                    <div className="space-y-2">
-                                        <h3 className="text-lg font-semibold text-brand-black group-hover:text-brand-primary transition-colors duration-300">{item.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                                    <p className="text-xs text-brand-black/60">A word from the Nguni language meaning 'to nurture and grow'.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="border-brand-accent/20">
+                                <CardContent className="p-4">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <Users className="h-5 w-5 text-brand-primary" />
+                                        <h4 className="font-semibold text-sm text-brand-black">Expert Leadership</h4>
                                     </div>
-                                </div>
-                            ))}
+                                    <p className="text-xs text-brand-black/60">Founded by registered Chartered Accountants with 30+ years experience.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="border-brand-accent/20">
+                                <CardContent className="p-4">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <Lightbulb className="h-5 w-5 text-brand-primary" />
+                                        <h4 className="font-semibold text-sm text-brand-black">Boutique Excellence</h4>
+                                    </div>
+                                    <p className="text-xs text-brand-black/60">Innovative financial solutions that feel approachable and accessible.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="border-brand-accent/20">
+                                <CardContent className="p-4">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <Target className="h-5 w-5 text-brand-primary" />
+                                        <h4 className="font-semibold text-sm text-brand-black">Multi-Industry Experience</h4>
+                                    </div>
+                                    <p className="text-xs text-brand-black/60">Deep expertise across financial services, banking, retail and more.</p>
+                                </CardContent>
+                            </Card>
                         </div>
-                        
-                         <div className="relative">
-                            <div className="absolute inset-0 bg-brand-gradient-card rounded-xl blur-sm"></div>
-                            <p className="relative text-gray-700 bg-white/90 p-6 rounded-xl border-brand-gradient shadow-brand leading-relaxed">
-                               We partner with organizations of all sizes to deliver tailored solutions that meet unique challenges and strategic goals. We are your trusted partner, delivering strategic clarity and operational confidence.
-                            </p>
-                            {/* Decorative corner accent */}
-                            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-brand-primary rounded-full opacity-20"></div>
-                         </div>
                     </div>
+                </div>
+
+                {/* Quote Section */}
+                <div className="bg-brand-purple-50 rounded-2xl p-6 lg:p-8 text-center">
+                    <blockquote className="text-base lg:text-lg font-medium text-brand-black mb-4">
+                        "We combine deep technical expertise with a collaborative approach, ensuring every client 
+                        receives tailored, high-quality service that builds lasting relationships."
+                    </blockquote>
+                    <div className="w-16 h-1 bg-brand-primary rounded-full mx-auto"></div>
                 </div>
             </div>
         </section>

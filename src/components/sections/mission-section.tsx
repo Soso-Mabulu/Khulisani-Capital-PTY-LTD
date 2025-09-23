@@ -1,56 +1,61 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Eye, Rocket, Handshake, Gem } from "lucide-react";
-
-const drives = [
-    {
-        icon: <Rocket className="h-8 w-8 text-primary" />,
-        title: "Our Mission",
-        description: "To empower businesses with accurate, actionable, and compliant financial insights that drive strategic clarity, operational efficiency, and long-term growth.",
-    },
-    {
-        icon: <Eye className="h-8 w-8 text-primary" />,
-        title: "Our Vision",
-        description: "To be Africa’s most trusted financial advisory partner — known for excellence, innovation, and impact across industries and borders.",
-    },
-    {
-        icon: <Gem className="h-8 w-8 text-primary" />,
-        title: "Our Purpose",
-        description: "We exist to elevate African enterprises by delivering world-class financial solutions that unlock potential, reduce complexity, and enable confident decision-making.",
-    },
-    {
-        icon: <Handshake className="h-8 w-8 text-primary" />,
-        title: "Our Promise",
-        description: "We combine deep technical expertise with a collaborative approach, ensuring every client receives tailored, high-quality service that solves real business problems.",
-    }
-];
+import Image from "next/image";
 
 export default function MissionSection() {
     return (
-        <section id="mission" className="py-16 lg:py-24 bg-background">
-            <div className="container">
-                <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <section id="mission" className="py-16 bg-gray-50">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-brand-black mb-4">
                         What Drives Us
                     </h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
+                    <p className="text-base text-brand-black/70 max-w-xl mx-auto">
                         Our core principles guide every action we take and every solution we deliver.
                     </p>
                 </div>
 
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {drives.map((drive, index) => (
-                        <Card key={index} className="text-center hover:shadow-xl transition-shadow bg-card border-border/50 hover:-translate-y-2 duration-300">
-                            <CardHeader>
-                                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
-                                    {drive.icon}
-                                </div>
-                                <CardTitle className="font-headline text-xl text-foreground">{drive.title}</CardTitle>
-                                <CardDescription className="pt-2 text-base text-muted-foreground">
-                                    {drive.description}
-                                </CardDescription>
-                            </CardHeader>
-                        </Card>
-                    ))}
+                {/* Mission Cards with Clean Design */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                    <Card className="group p-6 text-center bg-white border border-gray-200 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                            <Rocket className="h-6 w-6 text-brand-primary" />
+                        </div>
+                        <h3 className="font-semibold text-sm text-brand-black mb-2 group-hover:text-brand-primary transition-colors">Our Mission</h3>
+                        <p className="text-xs text-brand-black/70 leading-relaxed">
+                            To empower businesses with accurate, actionable, and compliant financial insights that drive strategic clarity and growth.
+                        </p>
+                    </Card>
+
+                    <Card className="group p-6 text-center bg-white border border-gray-200 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                            <Eye className="h-6 w-6 text-brand-primary" />
+                        </div>
+                        <h3 className="font-semibold text-sm text-brand-black mb-2 group-hover:text-brand-primary transition-colors">Our Vision</h3>
+                        <p className="text-xs text-brand-black/70 leading-relaxed">
+                            To be Africa's most trusted financial advisory partner — known for excellence, innovation, and impact across industries.
+                        </p>
+                    </Card>
+
+                    <Card className="group p-6 text-center bg-white border border-gray-200 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                            <Gem className="h-6 w-6 text-brand-primary" />
+                        </div>
+                        <h3 className="font-semibold text-sm text-brand-black mb-2 group-hover:text-brand-primary transition-colors">Our Purpose</h3>
+                        <p className="text-xs text-brand-black/70 leading-relaxed">
+                            We exist to elevate African enterprises by delivering world-class financial solutions that unlock potential.
+                        </p>
+                    </Card>
+
+                    <Card className="group p-6 text-center bg-white border border-gray-200 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                            <Handshake className="h-6 w-6 text-brand-primary" />
+                        </div>
+                        <h3 className="font-semibold text-sm text-brand-black mb-2 group-hover:text-brand-primary transition-colors">Our Promise</h3>
+                        <p className="text-xs text-brand-black/70 leading-relaxed">
+                            We combine deep technical expertise with a collaborative approach, ensuring tailored, high-quality service.
+                        </p>
+                    </Card>
                 </div>
             </div>
         </section>
