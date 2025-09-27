@@ -47,43 +47,43 @@ export interface JobPosition {
 // ===========================================================================
 
 export const jobPositions: JobPosition[] = [
-  {
-    id: 1,
-    title: "Senior Financial Analyst",
-    department: "Finance",
-    location: "Pretoria, South Africa",
-    type: "Full-time",
-    experience: "Senior Level",
-    salary: "R450,000 - R650,000",
-    isActive: true,
-    description: "We are seeking a Senior Financial Analyst to join our dynamic team. You will be responsible for financial planning, analysis, and reporting to support strategic business decisions.",
-    responsibilities: [
-      "Conduct comprehensive financial analysis and modeling",
-      "Prepare detailed financial reports and presentations",
-      "Support budgeting and forecasting processes",
-      "Identify trends and provide strategic recommendations",
-      "Collaborate with cross-functional teams on projects",
-      "Mentor junior analysts and support team development"
-    ],
-    requirements: [
-      "Bachelor's degree in Finance, Accounting, or related field",
-      "CFA or CA(SA) qualification preferred",
-      "5+ years of experience in financial analysis",
-      "Advanced Excel and financial modeling skills",
-      "Experience with ERP systems and financial software",
-      "Strong analytical and problem-solving abilities",
-      "Excellent communication and presentation skills"
-    ],
-    benefits: [
-      "Competitive salary and performance bonuses",
-      "Medical aid and pension fund contributions",
-      "Professional development opportunities",
-      "Flexible working arrangements",
-      "25 days annual leave",
-      "Training and certification support"
-    ],
-    postedDate: "2025-09-01"
-  },
+  // {
+  //   id: 1,
+  //   title: "Senior Financial Analyst",
+  //   department: "Finance",
+  //   location: "Pretoria, South Africa",
+  //   type: "Full-time",
+  //   experience: "Senior Level",
+  //   salary: "R450,000 - R650,000",
+  //   isActive: true,
+  //   description: "We are seeking a Senior Financial Analyst to join our dynamic team. You will be responsible for financial planning, analysis, and reporting to support strategic business decisions.",
+  //   responsibilities: [
+  //     "Conduct comprehensive financial analysis and modeling",
+  //     "Prepare detailed financial reports and presentations",
+  //     "Support budgeting and forecasting processes",
+  //     "Identify trends and provide strategic recommendations",
+  //     "Collaborate with cross-functional teams on projects",
+  //     "Mentor junior analysts and support team development"
+  //   ],
+  //   requirements: [
+  //     "Bachelor's degree in Finance, Accounting, or related field",
+  //     "CFA or CA(SA) qualification preferred",
+  //     "5+ years of experience in financial analysis",
+  //     "Advanced Excel and financial modeling skills",
+  //     "Experience with ERP systems and financial software",
+  //     "Strong analytical and problem-solving abilities",
+  //     "Excellent communication and presentation skills"
+  //   ],
+  //   benefits: [
+  //     "Competitive salary and performance bonuses",
+  //     "Medical aid and pension fund contributions",
+  //     "Professional development opportunities",
+  //     "Flexible working arrangements",
+  //     "25 days annual leave",
+  //     "Training and certification support"
+  //   ],
+  //   postedDate: "2025-09-01"
+  // },
   // {
   //   id: 2,
   //   title: "Tax Consultant",
