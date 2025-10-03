@@ -52,7 +52,10 @@ Please respond professionally to: ${input.message}`;
     const response = await result.response;
     const text = response.text();
 
-    return text || "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at info@kulisanicapital.com.";
+    return (
+      text ||
+      "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at info@kulisanicapital.com."
+    );
   } catch (error) {
     console.error("Site Chat Error:", error);
     return "I'm currently experiencing technical difficulties. Please contact us directly at info@kulisanicapital.com or call +27 12 345 6789 for immediate assistance.";
