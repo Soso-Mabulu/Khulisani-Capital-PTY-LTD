@@ -189,7 +189,7 @@ export default function CareersPage() {
             </p>
             <Button 
               className="bg-white text-brand-primary hover:bg-gray-100 font-semibold px-8 py-3"
-              onClick={() => window.location.href = 'mailto:careers@kulisanicapital.com?subject=General Application - Kulisani Capital'}
+              onClick={() => window.location.href = 'mailto:info@kulisanicapital.com?subject=General Application - Kulisani Capital'}
             >
               Submit Your CV
               <ArrowRight className="ml-2 h-4 w-4" />

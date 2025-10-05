@@ -311,7 +311,7 @@ export function OpportunityModal({
             </p>
             <Button 
               className="bg-gradient-to-r from-brand-primary to-brand-accent hover:from-brand-primary/90 hover:to-brand-accent/90 text-white"
-              onClick={() => window.location.href = 'mailto:careers@kulisanicapital.com?subject=Future Opportunities - Kulisani Capital'}
+              onClick={() => window.location.href = 'mailto:info@kulisanicapital.com?subject=Future Opportunities - Kulisani Capital'}
             >
               Submit Your CV
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -323,7 +323,7 @@ export function OpportunityModal({
           <div className="flex justify-between items-center">
             <p className="text-sm text-gray-600">
               Can't find what you're looking for? 
-              <a href="mailto:careers@kulisanicapital.com" className="text-brand-primary hover:underline ml-1">
+              <a href="mailto:info@kulisanicapital.com" className="text-brand-primary hover:underline ml-1">
                 Contact our HR team
               </a>
             </p>
