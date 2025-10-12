@@ -47,80 +47,80 @@ export interface JobPosition {
 // ===========================================================================
 
 export const jobPositions: JobPosition[] = [
-  {
-    id: 1,
-    title: "Senior Financial Analyst",
-    department: "Finance",
-    location: "Pretoria, South Africa",
-    type: "Full-time",
-    experience: "Senior Level",
-    salary: "R450,000 - R650,000",
-    isActive: true,
-    description: "We are seeking a Senior Financial Analyst to join our dynamic team. You will be responsible for financial planning, analysis, and reporting to support strategic business decisions.",
-    responsibilities: [
-      "Conduct comprehensive financial analysis and modeling",
-      "Prepare detailed financial reports and presentations",
-      "Support budgeting and forecasting processes",
-      "Identify trends and provide strategic recommendations",
-      "Collaborate with cross-functional teams on projects",
-      "Mentor junior analysts and support team development"
-    ],
-    requirements: [
-      "Bachelor's degree in Finance, Accounting, or related field",
-      "CFA or CA(SA) qualification preferred",
-      "5+ years of experience in financial analysis",
-      "Advanced Excel and financial modeling skills",
-      "Experience with ERP systems and financial software",
-      "Strong analytical and problem-solving abilities",
-      "Excellent communication and presentation skills"
-    ],
-    benefits: [
-      "Competitive salary and performance bonuses",
-      "Medical aid and pension fund contributions",
-      "Professional development opportunities",
-      "Flexible working arrangements",
-      "25 days annual leave",
-      "Training and certification support"
-    ],
-    postedDate: "2025-09-01"
-  },
-  {
-    id: 2,
-    title: "Tax Consultant",
-    department: "Tax Advisory",
-    location: "Pretoria, South Africa",
-    type: "Full-time",
-    experience: "Mid Level",
-    salary: "R350,000 - R500,000",
-    isActive: true,
-    description: "Join our Tax Advisory team as a Tax Consultant. You will provide expert tax advice to clients, ensure compliance, and support tax planning strategies.",
-    responsibilities: [
-      "Provide tax advisory services to corporate clients",
-      "Prepare and review tax returns and computations",
-      "Research tax legislation and regulatory changes",
-      "Support tax planning and optimization strategies",
-      "Assist with tax audits and SARS interactions",
-      "Maintain client relationships and provide ongoing support"
-    ],
-    requirements: [
-      "Bachelor's degree in Accounting, Taxation, or related field",
-      "Post-graduate tax qualification (HDip Tax) preferred",
-      "3-5 years of tax consulting experience",
-      "Strong knowledge of South African tax legislation",
-      "Experience with tax software and systems",
-      "Attention to detail and strong analytical skills",
-      "Client-focused with excellent communication skills"
-    ],
-    benefits: [
-      "Competitive salary with annual reviews",
-      "Medical aid and retirement fund",
-      "Continuing professional development",
-      "Flexible work arrangements",
-      "Performance-based incentives",
-      "Professional membership support"
-    ],
-    postedDate: "2025-08-28"
-  },
+  // {
+  //   id: 1,
+  //   title: "Senior Financial Analyst",
+  //   department: "Finance",
+  //   location: "Pretoria, South Africa",
+  //   type: "Full-time",
+  //   experience: "Senior Level",
+  //   salary: "R450,000 - R650,000",
+  //   isActive: true,
+  //   description: "We are seeking a Senior Financial Analyst to join our dynamic team. You will be responsible for financial planning, analysis, and reporting to support strategic business decisions.",
+  //   responsibilities: [
+  //     "Conduct comprehensive financial analysis and modeling",
+  //     "Prepare detailed financial reports and presentations",
+  //     "Support budgeting and forecasting processes",
+  //     "Identify trends and provide strategic recommendations",
+  //     "Collaborate with cross-functional teams on projects",
+  //     "Mentor junior analysts and support team development"
+  //   ],
+  //   requirements: [
+  //     "Bachelor's degree in Finance, Accounting, or related field",
+  //     "CFA or CA(SA) qualification preferred",
+  //     "5+ years of experience in financial analysis",
+  //     "Advanced Excel and financial modeling skills",
+  //     "Experience with ERP systems and financial software",
+  //     "Strong analytical and problem-solving abilities",
+  //     "Excellent communication and presentation skills"
+  //   ],
+  //   benefits: [
+  //     "Competitive salary and performance bonuses",
+  //     "Medical aid and pension fund contributions",
+  //     "Professional development opportunities",
+  //     "Flexible working arrangements",
+  //     "25 days annual leave",
+  //     "Training and certification support"
+  //   ],
+  //   postedDate: "2025-09-01"
+  // },
+  // {
+  //   id: 2,
+  //   title: "Tax Consultant",
+  //   department: "Tax Advisory",
+  //   location: "Pretoria, South Africa",
+  //   type: "Full-time",
+  //   experience: "Mid Level",
+  //   salary: "R350,000 - R500,000",
+  //   isActive: true,
+  //   description: "Join our Tax Advisory team as a Tax Consultant. You will provide expert tax advice to clients, ensure compliance, and support tax planning strategies.",
+  //   responsibilities: [
+  //     "Provide tax advisory services to corporate clients",
+  //     "Prepare and review tax returns and computations",
+  //     "Research tax legislation and regulatory changes",
+  //     "Support tax planning and optimization strategies",
+  //     "Assist with tax audits and SARS interactions",
+  //     "Maintain client relationships and provide ongoing support"
+  //   ],
+  //   requirements: [
+  //     "Bachelor's degree in Accounting, Taxation, or related field",
+  //     "Post-graduate tax qualification (HDip Tax) preferred",
+  //     "3-5 years of tax consulting experience",
+  //     "Strong knowledge of South African tax legislation",
+  //     "Experience with tax software and systems",
+  //     "Attention to detail and strong analytical skills",
+  //     "Client-focused with excellent communication skills"
+  //   ],
+  //   benefits: [
+  //     "Competitive salary with annual reviews",
+  //     "Medical aid and retirement fund",
+  //     "Continuing professional development",
+  //     "Flexible work arrangements",
+  //     "Performance-based incentives",
+  //     "Professional membership support"
+  //   ],
+  //   postedDate: "2025-08-28"
+  // },
   // {
   //   id: 3,
   //   title: "Business Development Manager",
