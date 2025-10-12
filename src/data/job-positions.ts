@@ -84,24 +84,24 @@ export const jobPositions: JobPosition[] = [
     ],
     postedDate: "2025-09-01"
   },
-  // {
-  //   id: 2,
-  //   title: "Tax Consultant",
-  //   department: "Tax Advisory",
-  //   location: "Pretoria, South Africa",
-  //   type: "Full-time",
-  //   experience: "Mid Level",
-  //   salary: "R350,000 - R500,000",
-  //   isActive: true,
-  //   description: "Join our Tax Advisory team as a Tax Consultant. You will provide expert tax advice to clients, ensure compliance, and support tax planning strategies.",
-  //   responsibilities: [
-  //     "Provide tax advisory services to corporate clients",
-  //     "Prepare and review tax returns and computations",
-  //     "Research tax legislation and regulatory changes",
-  //     "Support tax planning and optimization strategies",
-  //     "Assist with tax audits and SARS interactions",
-  //     "Maintain client relationships and provide ongoing support"
-  //   ],
+  {
+    id: 2,
+    title: "Tax Consultant",
+    department: "Tax Advisory",
+    location: "Pretoria, South Africa",
+    type: "Full-time",
+    experience: "Mid Level",
+    salary: "R350,000 - R500,000",
+    isActive: true,
+    description: "Join our Tax Advisory team as a Tax Consultant. You will provide expert tax advice to clients, ensure compliance, and support tax planning strategies.",
+    responsibilities: [
+      "Provide tax advisory services to corporate clients",
+      "Prepare and review tax returns and computations",
+      "Research tax legislation and regulatory changes",
+      "Support tax planning and optimization strategies",
+      "Assist with tax audits and SARS interactions",
+      "Maintain client relationships and provide ongoing support"
+    ],
   //   requirements: [
   //     "Bachelor's degree in Accounting, Taxation, or related field",
   //     "Post-graduate tax qualification (HDip Tax) preferred",
