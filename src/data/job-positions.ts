@@ -102,25 +102,25 @@ export const jobPositions: JobPosition[] = [
       "Assist with tax audits and SARS interactions",
       "Maintain client relationships and provide ongoing support"
     ],
-  //   requirements: [
-  //     "Bachelor's degree in Accounting, Taxation, or related field",
-  //     "Post-graduate tax qualification (HDip Tax) preferred",
-  //     "3-5 years of tax consulting experience",
-  //     "Strong knowledge of South African tax legislation",
-  //     "Experience with tax software and systems",
-  //     "Attention to detail and strong analytical skills",
-  //     "Client-focused with excellent communication skills"
-  //   ],
-  //   benefits: [
-  //     "Competitive salary with annual reviews",
-  //     "Medical aid and retirement fund",
-  //     "Continuing professional development",
-  //     "Flexible work arrangements",
-  //     "Performance-based incentives",
-  //     "Professional membership support"
-  //   ],
-  //   postedDate: "2025-08-28"
-  // },
+    requirements: [
+      "Bachelor's degree in Accounting, Taxation, or related field",
+      "Post-graduate tax qualification (HDip Tax) preferred",
+      "3-5 years of tax consulting experience",
+      "Strong knowledge of South African tax legislation",
+      "Experience with tax software and systems",
+      "Attention to detail and strong analytical skills",
+      "Client-focused with excellent communication skills"
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Medical aid and retirement fund",
+      "Continuing professional development",
+      "Flexible work arrangements",
+      "Performance-based incentives",
+      "Professional membership support"
+    ],
+    postedDate: "2025-08-28"
+  },
   // {
   //   id: 3,
   //   title: "Business Development Manager",
