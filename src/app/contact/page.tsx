@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -53,6 +53,14 @@ export default function ContactPage() {
       subtitle: "We'll respond within 24 hours",
       href: "mailto:info@kulisanicapital.com",
       color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: <Linkedin className="h-6 w-6" />,
+      title: "Connect on LinkedIn",
+      content: "Kulisani Capital Page",
+      subtitle: "Follow our professional updates",
+      href: "https://www.linkedin.com/company/kulisani-capital/",
+      color: "from-indigo-500 to-indigo-600"
     },
     {
       icon: <Phone className="h-6 w-6" />,
