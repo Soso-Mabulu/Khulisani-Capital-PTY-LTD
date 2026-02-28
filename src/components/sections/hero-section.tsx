@@ -148,7 +148,7 @@ export default function HeroSection() {
         <Card className="p-2 lg:p-3 bg-white/95 backdrop-blur-sm shadow-lg border-brand-accent/20">
           <div className="flex items-center gap-2 text-xs lg:text-sm text-brand-black/70">
             <Shield className="w-3 h-3 lg:w-4 lg:h-4 text-brand-primary" />
-            <span>SARB Regulated</span>
+            <span></span>
           </div>
         </Card>
       </div>
